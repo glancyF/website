@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My site{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block extra_css %}{% endblock %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav">
+                <li><a href="/"><i class="fas fa-house"></i> Home</a></li>
+                <li><a href="/projects/"><i class="fas fa-folder-open"></i> Projects</a></li>
+                <li><a href="/blog/"><i class="fas fa-blog"></i> Blog</a></li>
+                <button class="theme-toggle" id="toggle-theme">Switch Theme</button>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; {{ now|date:"Y" }} Valentyn Deshel</p>
+    </footer>
+
+    <script src="{% static 'js/main.js' %}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

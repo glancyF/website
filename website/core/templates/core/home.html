@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Main{% endblock %}
+{% load static %}
+{% block content %}
+
+    <div class="hero fade-in">
+        <div class="image-size">
+            <img src="{% static 'media/ya.jpg' %}" alt="Valentyn Deshel">
+        </div>
+        <h1>Hi, I am Valentyn Deshel!</h1>
+        <p>There will be some projects, blog, and more interesting things.</p>
+        <div class="social-links">
+            <a href="https://github.com/glancyF" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/valentyn-deshel-9b9b97274/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://t.me/GlancyF" target="_blank"><i class="fab fa-telegram"></i></a>
+            <a href="https://www.instagram.com/glancy.y/#" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="fibonacci-section">
+            <h2>Fibonacci Counter</h2>
+            <button id="fib-btn">Fibonacci</button>
+                <div class="fib-scroll">
+                    <p id="fib-result">0</p>
+                </div>
+        </div>
+
+    </div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
