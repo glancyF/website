@@ -90,8 +90,8 @@ DATABASES = {
         'NAME': config('DATABASE_NAME'),
         'USER': config('DATABASE_USER'),
         'PASSWORD': config('DATABASE_PASSWORD'),
-        'HOST': '127.0.0.1',  # или 'localhost'
-        'PORT': '5432',       # можно оставить пустым, но лучше указать явно
+        'HOST': config('DATABASE_HOST'),
+        'PORT': config('DATABASE_PORT', default='5432'),
     }
 }
 # Password validation
