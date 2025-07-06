@@ -22,6 +22,6 @@ urlpatterns = [
     path('', include("core.urls")),
     path('blog/', include('blog.urls')),
     path('projects/', include('projects.urls')),
-    path('create-admin/', create_admin),
+
 
 ]
